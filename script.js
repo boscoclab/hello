@@ -60,7 +60,7 @@ const CORD_TL = timeline({
 
         set(document.documentElement, { "--shade-hue": hue });
 
-        const glowColor = `hsl(${hue}, 30%, 45%)`;
+        const glowColor0 = `hsl(${hue}, 30%, 45%)`;
         const glowColor1 = `hsl(${hue}, 30%, 42.5%)`;
         const glowColor2 = `hsl(${hue}, 30%, 40%)`;
         const glowColor3 = `hsl(${hue}, 30%, 37.5%)`;
@@ -72,7 +72,7 @@ const CORD_TL = timeline({
 
 
         set(document.documentElement, {
-            "--glow-color": glowColor,
+            "--glow-color-0": glowColor0,
             "--glow-color-1": glowColor1,
             "--glow-color-2": glowColor2,
             "--glow-color-3": glowColor3,

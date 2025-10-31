@@ -55,7 +55,7 @@
     --t-3: hsl(var(--shade-hue),
             calc((0 + (var(--on, 0) * 20)) * 1%),
             calc((10 + (var(--on, 0) * 20)) * 1%));
-    --glow-color: hsl(320, 40%, 45%);
+    --glow-color-0: hsl(320, 40%, 45%);
     --glow-color-1: hsl(320, 40%, 42.5%);
     --glow-color-2: hsl(320, 40%, 40%);
     --glow-color-3: hsl(320, 40%, 37.5%);
@@ -127,9 +127,9 @@ body {
     opacity: 1;
     transform: scale(0.7) translateY(0);
     pointer-events: all;
-    border-color: var(--glow-color);
+    border-color: var(--glow-color-0);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1),
-        0 0 30px var(--glow-color),
+        0 0 30px var(--glow-color-0),
         inset 0 0 15px rgba(255, 255, 255, 0.05);
 }
 
@@ -385,7 +385,7 @@ body {
 .top {
     left: 0;
     border-right: 300px solid transparent;
-    border-top: 200px solid var(--glow-color);
+    border-top: 200px solid var(--glow-color-0);
     /* border-top: 200px solid #193e6e; */
     border-left: 300px solid transparent;
     transition: transform 1s, border 1s, ease-in-out;
@@ -568,17 +568,8 @@ body {
         align-items: center;
         text-align: center;
     }
-.message-photo {
-    width: 250px; /* larger size on mobile */
-    height: auto;
-    max-width: 100%;
-    margin-top: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+
+
 
 
 
@@ -612,9 +603,9 @@ body {
     .top {
         left: 0;
         border-right: calc(300px * var(--scale-factor)) solid transparent;
-        border-top: calc(200px * var(--scale-factor)) solid var(--glow-color);
+        border-top: calc(200px * var(--scale-factor)) solid var(--glow-color-0);
         border-left: calc(300px * var(--scale-factor)) solid transparent;
-        transition: transform 1s, border 1s ease-in-out;
+        /* transition: transform 1s, border 1s ease-in-out; */
         transform-origin: top;
         transform: rotateX(0deg);
         z-index: 500;
@@ -651,10 +642,17 @@ body {
         z-index: 300;
     }
 
-
+    .message-photo {
+        width: 250px;
+        /* larger size on mobile */
+        height: auto;
+        max-width: 100%;
+        margin-top: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 }
-
-    
-
-
